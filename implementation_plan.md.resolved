@@ -1,0 +1,35 @@
+# Campus Management App Initialization
+
+## Goal
+Build a Campus Management System tailored for Teachers and Students. The system will use a NestJS backend and a React Native frontend.
+
+## User Review Required
+> [!IMPORTANT]
+> Please review the core features list and the technology stack below. Let me know if you would like me to add anything else in the first version!
+
+## Proposed Changes
+
+### Backend (NestJS)
+- **Database setup**: Use SQLite for easy local development (can be upgraded to PostgreSQL later).
+- **Authentication**: JWT-based login for all users.
+- **Roles**: Distinct permissions for `TEACHER` and `STUDENT`.
+- **Modules**:
+  - `Users` (Profile management)
+  - `Announcements` (Notice board)
+  - `Attendance` (Daily tracking)
+  - `Assignments` (Homework management)
+  - `Grades` (Test scores)
+
+### Frontend (React Native - Expo)
+- **Navigation**: React Navigation with a login flow and a main tabbed layout.
+- **Teacher Dashboard**: Interfaces to take attendance, add grades, and post announcements.
+- **Student Dashboard**: Interfaces to view schedule, check attendance/grades, and read announcements.
+
+## Verification Plan
+### Automated Tests
+- Run `npm run start:dev` on the backend folder to ensure the server starts correctly.
+- Run `npx expo start` on the frontend folder to ensure the app compiles properly.
+
+### Manual Verification
+- We will manually test the Auth endpoints (Register, Login) via external tools.
+- We will verify the Expo app works in the web browser or Expo Go mobile app.
